@@ -1,5 +1,5 @@
 #!usr/bin/python3
-#edit
+
 import RPi.GPIO as GPIO #GPIO Kontrolle für Raspberry Pi einbinden
 import time #Zur Zeitverzögerung
 GPIO.setmode(GPIO.BCM) #Ansprache der GPIOs über GPIO Nummer möglich
@@ -20,7 +20,7 @@ for i in range(5):
 print("Jetzt Schalter drücken!")
 time.sleep(2)
 
-for i in range(1000):
+for i in range(30):
     if GPIO.input(24) == 0:
         GPIO.output(23, GPIO.LOW) #aus
     else:
@@ -29,3 +29,4 @@ for i in range(1000):
 
 
 GPIO.cleanup() #Channel Belegung sauber machen
+print("Vorbei")
