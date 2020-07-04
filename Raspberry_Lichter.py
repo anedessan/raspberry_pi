@@ -1,5 +1,5 @@
 #!usr/bin/python3
-
+#edit
 import RPi.GPIO as GPIO #GPIO Kontrolle für Raspberry Pi einbinden
 import time #Zur Zeitverzögerung
 GPIO.setmode(GPIO.BCM) #Ansprache der GPIOs über GPIO Nummer möglich
