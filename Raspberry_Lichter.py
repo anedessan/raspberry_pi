@@ -21,8 +21,13 @@ print("Jetzt Schalter drücken!")
 time.sleep(2)
 
 for i in range(30):
+    if GPIO.input(24) == 0:
+        GPIO.output(23, GPIO.LOW) #aus
+    else:
+        GPIO.output(23, GPIO.HIGH) #ein
+
     if GPIO.input(24) == 1:
-        if GPIO.output(23) == 1:
+        if GPIO.input(23) == 1:
             GPIO.output(23, GPIO.LOW)
         else:
             GPIO.output(23, GPIO.HIGH)
