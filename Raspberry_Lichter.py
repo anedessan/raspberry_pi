@@ -17,7 +17,7 @@ for i in range(5):
     time.sleep(0.5)
 
 
-print("Jetzt Schalter drücken!")
+print("Jetzt Schalter drücken! neu")
 time.sleep(2)
 
 for i in range(30):
