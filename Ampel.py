@@ -53,8 +53,5 @@ for t in range(100):
         for i in gpio_outputs:
                 GPIO.output(i, GPIO.LOW)
 
-print("Hallo")
-
-
 
 GPIO.cleanup() #Channel Belegung sauber machen
