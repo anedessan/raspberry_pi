@@ -12,8 +12,8 @@ for i in gpio_outputs:
 t = 0 #ampeldurchlauf
 n = 0 #anzahl der durchläufe
 
-for n in range(3):
-    for t in range(5):
+
+for t in range(5):
         #Step 1: Rot
         GPIO.output(23, GPIO.HIGH)
         print("rot")
@@ -36,6 +36,10 @@ for n in range(3):
         GPIO.output(24, GPIO.HIGH)
         print("gelb")
         time.sleep(1)
+
+        #Step5: wieder rot
+        GPIO.output(24, GPIO.LOW)
+        GPIO.output(23, GPIO.HIGH)
 
         print("Ende")
 
