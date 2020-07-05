@@ -34,7 +34,7 @@ for n in range(3):
         #Step4: Gelb
         GPIO.output(25, GPIO.LOW)
         GPIO.output(24, GPIO.HIGH)
-        print"gelb"
+        print("gelb")
         time.sleep(1)
 
         print("Ende")
