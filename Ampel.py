@@ -10,38 +10,33 @@ for i in gpio_outputs:
     GPIO.setup(i, GPIO.OUT)
 
 t = 0 #ampeldurchlauf
-n = 0 #anzahl der durchläufe
 
-
+GPIO.output(23, GPIO.HIGH)
 for t in range(5):
         #Step 1: Rot
         GPIO.output(23, GPIO.HIGH)
-        print("rot")
-        time.sleep(1)
+        time.sleep(3)
 
         #Step 2: Rot-Gelb
         GPIO.output(24, GPIO.HIGH)
-        print("rot-gelb")
         time.sleep(1)
 
         #Step3: Grün
         GPIO.output(23, GPIO.LOW)
         GPIO.output(24, GPIO.LOW)
         GPIO.output(25, GPIO.HIGH)
-        print("grün")
-        time.sleep(1)
+        time.sleep(3)
 
         #Step4: Gelb
         GPIO.output(25, GPIO.LOW)
         GPIO.output(24, GPIO.HIGH)
-        print("gelb")
         time.sleep(1)
 
         #Step5: wieder rot
         GPIO.output(24, GPIO.LOW)
         GPIO.output(23, GPIO.HIGH)
 
-        print("Ende")
+
 
 
 GPIO.cleanup() #Channel Belegung sauber machen
