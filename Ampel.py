@@ -46,7 +46,7 @@ t = 0
 for i in gpio_outputs:
         GPIO.output(i, GPIO.LOW)
 
-for t in range(30):
+for t in range(100):
         r = random.randint(23,25)
         GPIO.output(r, GPIO.HIGH)
         time.sleep(0.1)
