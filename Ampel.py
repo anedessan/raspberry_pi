@@ -2,6 +2,7 @@
 
 import RPi.GPIO as GPIO #GPIO Kontrolle für Raspberry Pi einbinden
 import time #Zur Zeitverzögerung
+import random
 GPIO.setmode(GPIO.BCM) #Ansprache der GPIOs über GPIO Nummer möglich
 
 gpio_outputs = [23, 24, 25]
