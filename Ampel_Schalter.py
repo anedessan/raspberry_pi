@@ -19,7 +19,7 @@ setup()
 GPIO.output(23, GPIO.HIGH)
 
 
-status = ("rot", "rot-gelb", "gruen", "gelb")
+status = ["rot", "rot-gelb", "gruen", "gelb"]
 
 
 for i in range(status):
