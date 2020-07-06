@@ -13,6 +13,9 @@ def setup():
            GPIO.setup(i, GPIO.OUT)
         GPIO.setup(gpio_inputs, GPIO.IN)
 
+def alles_aus():
+        for i in gpio_outputs:
+                GPIO.output(gpio_outputs, GPIO.LOW)
 
 #Start
 setup()
@@ -20,10 +23,26 @@ GPIO.output(23, GPIO.HIGH)
 
 
 status = ["rot", "rot-gelb", "gruen", "gelb"]
+button = True
+
 
 
 for i in status:
-        print(i)
+        if i == "rot":
+            alles_aus()
+            GPIO.output(23, GPIO.HIGH)
+        if i == "rot-gelb":
+                alles_aus()
+                GPIO.output(23, GPIO.HIGH)
+                GPIO.output(24, GPIO.HIGH)
+        if i == "gruen":
+                alles_aus()
+                GPIO.output(25, GPIO.HIGH)
+        if i == "gelb":
+                alles_aus()
+                GPIO.output(24, GPIO.HIGH)
+        time.sleep(2)
+
 
 
 
